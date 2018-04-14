@@ -1,0 +1,23 @@
+<!-- /templates/product.liquid -->
+{% comment %}
+  The contents of the product.liquid template can be found in /sections/product-template.liquid
+{% endcomment %}
+
+{% section 'product-template' %}
+
+<script>
+  if(window.location.href.includes('/products')){
+    var country_code;
+    var product_id;
+
+    fetch('http://freegeoip.net/json/').then(function(response) {
+      return response.json();
+    }).then(function(data){
+      product_id = 'shopify_' + data.country_code + '_{{ product.id }}_{{ product.selected_or_first_available_variant.id }}';
+    });
+
+    var product_title = '{{ product.title }}';
+    var product_price = '{{ product.price | money_without_currency }}';
+    var product_type  = '{{ product.type }}';
+  }
+</script>

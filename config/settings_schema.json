@@ -140,6 +140,11 @@
             "label": "Droid Sans",
             "group": "Sans-serif | Google Web Fonts"
           },
+	  {
+            "value": "Google_Alex+Brush_400_cursive",
+            "label": "Alex Brush",
+            "group": "Sans-serif | Google Web Fonts"
+          },
           {
             "value": "Google_Droid+Sans_700_sans",
             "label": "Droid Sans Bold",
